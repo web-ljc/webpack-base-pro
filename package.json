@@ -1,0 +1,27 @@
+{
+  "name": "webpack_code",
+  "version": "1.0.0",
+  "description": "webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web-ljc/webpack-pro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/web-ljc/webpack-pro/issues"
+  },
+  "homepage": "https://github.com/web-ljc/webpack-pro#readme",
+  "devDependencies": {
+    "css-loader": "5.0.0",
+    "less": "^4.1.2",
+    "less-loader": "7.0.0",
+    "style-loader": "2.0.0",
+    "webpack": "4.41.6",
+    "webpack-cli": "3.3.11"
+  }
+}
