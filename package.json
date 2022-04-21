@@ -18,6 +18,7 @@
   "homepage": "https://github.com/web-ljc/webpack-pro#readme",
   "devDependencies": {
     "css-loader": "5.0.0",
+    "html-webpack-plugin": "4.0.0",
     "less": "^4.1.2",
     "less-loader": "7.0.0",
     "style-loader": "2.0.0",
