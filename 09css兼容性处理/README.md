@@ -2,7 +2,6 @@
 /* 
   css兼容
 
-/* 
   css兼容处理： postcss -- postcss-loader postcss-preset-env
   帮postcss找到package.json中browsers里面的配置，通过配置加载指定的css兼容样式
   "browserslist": {
@@ -30,6 +29,5 @@
       ]
     }
   }
-*/
 */
 ```
