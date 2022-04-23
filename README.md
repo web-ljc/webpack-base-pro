@@ -15,13 +15,54 @@
     - 插件（Plugins）可以用于执行范围更广的任务。插件的范围包括，从打包优化和压缩一直到重新定义环境中的变量等
   - Mode
     - 模式（Mode）指示webpack使用相应模式的配置
-  
-### wepack性能优化
-  - 开发环境性能优化
-    - 优化打包构建速度
-    - 优化代码调试
 
-  - 生产环境性能优化
+### 生产环境配置
+
+- css打包配置
+  - 编译 css-loader style-loader 
+  - 分离文件 mini-css-extract-plugin
+  - 兼容处理 postcss-loader
+  - 压缩文件 optimize-css-assets-webpack-plugin
+
+- js打包配置
+  - 校验 eslint-loader
+  - 兼容处理 babel-loader
+  - 压缩 mode: production
+
+- 图片处理
+  - 编译 url-loader
+  - 优化图片 limit
+  
+- html处理
+  - 编译 HtmlWebpackPlugin
+  - html中图片 html-loader
+  - 压缩 minify
+
+- 其他处理
+  - 编译 file-loader
+
+### wepack性能优化
+  #### 开发环境性能优化
     - 优化打包构建速度
+      + HMR js需自己写/css 使用style-loader
+    - 优化代码调试
+      source-map
+
+  #### 生产环境性能优化
+    - 优化打包构建速度
+      + oneOf
+      + babel缓存
+      + 多进程打包
+      + externals / 配合CDN引用
+      + dll / 部署
     - 优化代码运行的性能
-    
+      + 缓存（hash-chunkhash-contenthash）
+        - hash webpack打包生成唯一hash值
+        - chunkhash  打包同一个入口，就是同一chunkhash
+        - contenthash 根据内容生成hash
+      + tree shaking
+      + 代码分割
+        - 单入口 bundle
+        - 多入口
+      + 懒加载/预加载
+      + pwa
